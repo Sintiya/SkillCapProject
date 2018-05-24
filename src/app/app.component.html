@@ -1,0 +1,29 @@
+<!--<ul>
+    <li><a [routerLink] = "['/Product']">Product</a></li>
+    <li><a [routerLink] = "['/Inventory']">Inventory</a></li>
+ </ul>
+ <router-outlet></router-outlet>-->
+ <body class="bgimage">
+ <div class="navbar navbar-default" *ngIf="isLoggedIn">
+        
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <a class="navbar-brand"><span class="glyphicon glyphicon-cog navtext"><b>&nbsp;SkillCap</b></span></a>
+               </div>
+               
+            </div>
+         </div>
+<div class="abs-center" *ngIf="isLoggedIn">
+ <div class="text-center"><h2>Welcome to SkillCap</h2></div>
+ <!--<div class="text-center">
+     Click <a [routerLink] = "['/Inventory']" (click)="isLoggedIn=!isLoggedIn">here</a> to login
+ </div>-->
+ 
+ <a [routerLink] = "['/Inventory']" (click)="isLoggedIn=!isLoggedIn"><img class="img-responsive center-block" src="../assets/login_trans.png" alt="login" width="100"></a>
+
+ 
+</div>
+
+<router-outlet></router-outlet>
+
+</body>
